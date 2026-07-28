@@ -7,11 +7,15 @@ to start, search WSL in Start tab and open it, it will open cmd automatically an
 //list all containers
 > podman ps
 
+//list available Podman-managed virtual machines
 > podman machine ls
 
 > podman run hello-world
 
 > podman pull --tls-verify=false nginx    //have an image available in podman now
+
+in Windows Subsystem for Linux (WSL), the 'image' you pull out (export) is actually your extire installed Linux operating system (eg. Ubuntu, Debian etc.)
+formatted as a .tar file.
 
 //list all the available images
 > podman ps -a    //list all the containers ???
