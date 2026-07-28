@@ -28,7 +28,12 @@ Quay.io
 GitHub Container Registry
 Amazon Elastic Container Registry
 
-//run engine X
+
+NGINX is available as an official docker image. it is not 'built-in' to your operating system, but it is a pre-configured, ready-to-run image 
+available on Docker Hub, making it very easy to deploy in containers.
+run nginx (pronounce: engine X)：
+//Use the local nginx image to create and start a new container, map port 8080 on the host (your computer) to port 80 inside the container, and 
+automatically remove the container when it stops.
 > podman run --rm -p 8080:80 nginx
 then open a browser with url: http://localhost:8080/
 then ctrl+C: exit the running process
