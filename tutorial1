@@ -4,6 +4,7 @@ to start, search WSL in Start tab and open it, it will open cmd automatically an
 //ignore certificate
 > podman run --tls-verify=false hello-world
 
+//list all containers
 > podman ps
 
 > podman machine ls
