@@ -4,7 +4,7 @@ to start, search WSL in Start tab and open it, it will open cmd automatically an
 //ignore certificate
 > podman run --tls-verify=false hello-world
 
-//list all containers
+//list all RUNNING containers
 > podman ps
 
 //list available Podman-managed virtual machines
@@ -17,9 +17,16 @@ to start, search WSL in Start tab and open it, it will open cmd automatically an
 in Windows Subsystem for Linux (WSL), the 'image' you pull out (export) is actually your extire installed Linux operating system (eg. Ubuntu, Debian etc.)
 formatted as a .tar file.
 
-//list all the available images
-> podman ps -a    //list all the containers ???
+//list all the containers 
+> podman ps -a   
+//list all the images which have been pulled to your local machine, images need to be pulled from remote registry by > podman pull nginx 
 > podman images
+
+remote registry would be:
+Docker Hub
+Quay.io
+GitHub Container Registry
+Amazon Elastic Container Registry
 
 //run engine X
 > podman run --rm -p 8080:80 nginx
