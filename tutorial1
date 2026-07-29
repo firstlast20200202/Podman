@@ -66,20 +66,20 @@ then in podman desktop application: Dashboard -> Pods, click the pod name, it wi
 
 
 build the image and run the container on the image: (Rider is used to auto-generate dockerfile)
-open jetbrains rider, click New Solution, select 'Web API' on the left side of the pop up window, Web API is the traditional ASP.NET Web Application, 
+open Jetbrains Rider, click New Solution, select 'Web API' on the left side of the pop up window, Web API is the traditional ASP.NET Web Application, 
 set a solution name and follow the prompts to finish the process
 get into the folder in local machine where the solution has been created in, say, in folder 'MyPodmanAPI', there is one more folder called 'MyPodmanAPI' which has a dockerfile, 
 copy the dockerfile to the outer 'MyPodmanAPI' folder, then open terminal in the rider app, run:
-> podman build . -t MyPodmanAPI1
-it's pulling the image and building it as well as containerising the application into the image
+> podman build . -t MyPodmanAPI1        //it's pulling the image and building it as well as containerising the application into the image
 > podman images
 then run the application locally in development environment:
-podman run -p 8085:8080 MyPodmanAPI1
+> podman run -p 8085:8080 MyPodmanAPI1
 then click the green triangle button on top right of rider app
-so now we are in the 'run' tab at the bottom left cornor of rider app
-click the 'terminal' tab under the 'run' tab, run the scripts typed already as above: podman run --tls-verify=false -p 8085:8080 mypodmanapi1
+so now we are in the 'run' tab at the bottom left corner of Rider app
+click the 'terminal' tab under the 'run' tab, run the scripts typed already as above: > podman run --tls-verify=false -p 8085:8080 mypodmanapi1
 //make sure all the letters are in lower cases
-error: requested access to the resource is denied
+then find the url in MyPodmanAPI1http file in Rider, and open the request link in browser, it should be running.
+actually... error: requested access to the resource is denied
 
 
 
