@@ -63,6 +63,9 @@ issue: it doesnt show it stopped 1 min ago, it shows 'Exited (0) 12 hours ago'  
 > podman ps -a    //verify
 then in podman desktop application: Dashboard -> Pods, click the pod name, it will show the logs and inspect etc. of this newly created pod
 
+
+
+build the image and run the container on the image: (Rider is used to auto-generate dockerfile)
 open jetbrains rider, click New Solution, select 'Web API' on the left side of the pop up window, Web API is the traditional ASP.NET Web Application, 
 set a solution name and follow the prompts to finish the process
 get into the folder in local machine where the solution has been created in, say, in folder 'MyPodmanAPI', there is one more folder called 'MyPodmanAPI' which has a dockerfile, 
