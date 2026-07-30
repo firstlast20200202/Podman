@@ -26,3 +26,7 @@ because the virtual machine that images have been built is dead, it needs to be 
 
 30th July 2026:
 to make podman work for containers, you need to install podman to create images; to install podman, you need to install wsl
+error:
+podman building images: stuck at step 6/7: COPY --chmod=770..
+probably caused by large build contexts or massive node_modules drectories
+solution: create a .dockerignore file 
