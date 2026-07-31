@@ -11,16 +11,23 @@ install Podman and open cmd:
 > podman run --tls-verify=false hello-world    //there shouldnt be a space before 'world', as it couldnt be recognised
 
 so the whole idea of this tutorial is:
-pull an image from a public registry -> run it in my local machine -> 
-
+pull an image from a public registry -> run a container in my local machine -> the web application would be running on localhost
+execute:
 > podman pull --tls-verify=false nginx    //have an image available in podman now
+> podman run --rm -p 8080:80 nginx        //run nginx (pronounce: engine X)：use the local nginx image to create and start a new container, map port 
+8080 on the host (your computer) to port 80 inside the container, and automatically remove the container when it stops.
+then open a browser with url: http://localhost:8080/
+ctrl+C: exit the running process
+//-d makes it run in detach mode, so still can use the shell without ctrl+C 
+> podman run --rm -d -p 8083:00 nginx
+then input http://localhost:8083/ into the browser, it will run again.
 
 
 
 some useful commands:
 //list all RUNNING containers
 > podman ps
-//list all the containers 
+//list all the containers including created, exited, stopped ones
 > podman ps -a   
 //list all the images which have been pulled to your local machine, images need to be pulled from remote registry by > podman pull <image-name>
 > podman images
@@ -38,17 +45,10 @@ GitHub Container Registry
 Amazon Elastic Container Registry
 
 
-NGINX is available as an official docker image. it is not 'built-in' to your operating system, but it is a pre-configured, ready-to-run image 
-available on Docker Hub, making it very easy to deploy in containers.
-run nginx (pronounce: engine X)：
-//Use the local nginx image to create and start a new container, map port 8080 on the host (your computer) to port 80 inside the container, and 
-automatically remove the container when it stops.
-> podman run --rm -p 8080:80 nginx
-then open a browser with url: http://localhost:8080/
-then ctrl+C: exit the running process
-//-d makes it run in detach mode, so still can use the shell without ctrl+C 
-> podman run --rm -d -p 8083:00 nginx
-then input http://localhost:8083/ into the browser, it will run again.
+
+
+
+
 
 sometimes if run:
 > podman run --tls-verify=false --rm -p 8080:80 nginx
@@ -59,7 +59,7 @@ the solution is as below:
 > docker ps                          //list running containers only
 > docker rm -f $(docker ps -aq)
 
-> podman ps -a    //list all the containers including created, exited, stopped ones
+
 > podman stop [Container ID]    //stop the running container with container ID
 //refresh the localhost:8083 page, it would lose the connection as expected
 //when the container is running, to run more commands, we would use ctrl+C on keyboard, but it will stop running the container
@@ -89,17 +89,4 @@ click the 'terminal' tab under the 'run' tab, run the scripts typed already as a
 //make sure all the letters are in lower cases
 then find the url in MyPodmanAPI1http file in Rider, and open the request link in browser, it should be running.
 actually... error: requested access to the resource is denied
-
-
-
-
-
-
-
-
-
-
-
-
-
 
