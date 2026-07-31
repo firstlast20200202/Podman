@@ -22,7 +22,7 @@ some useful commands:
 > podman ps
 //list all the containers 
 > podman ps -a   
-//list all the images which have been pulled to your local machine, images need to be pulled from remote registry by > podman pull nginx 
+//list all the images which have been pulled to your local machine, images need to be pulled from remote registry by > podman pull <image-name>
 > podman images
 
 //list available Podman-managed virtual machines
