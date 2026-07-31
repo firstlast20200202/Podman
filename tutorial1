@@ -1,6 +1,11 @@
 //tutorial link: https://www.youtube.com/watch?v=sSGVqblVzbA
 
-to start, search WSL in Start tab and open it, it will open cmd automatically and in the proper route
+to use Podman, WSL needs to be installed first:
+> wsl --install
+> wsl --version
+
+
+install Podman and open cmd:
 //ignore certificate
 > podman run --tls-verify=false hello-world
 
