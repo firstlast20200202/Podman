@@ -20,17 +20,16 @@ pull an image from a public registry -> run it in my local machine ->
 some useful commands:
 //list all RUNNING containers
 > podman ps
+//list all the containers 
+> podman ps -a   
+//list all the images which have been pulled to your local machine, images need to be pulled from remote registry by > podman pull nginx 
+> podman images
 
 //list available Podman-managed virtual machines
 > podman machine ls
 
 in Windows Subsystem for Linux (WSL), the 'image' you pull out (export) is actually your extire installed Linux operating system (eg. Ubuntu, Debian etc.)
 formatted as a .tar file.
-
-//list all the containers 
-> podman ps -a   
-//list all the images which have been pulled to your local machine, images need to be pulled from remote registry by > podman pull nginx 
-> podman images
 
 remote registry would be:
 Docker Hub
