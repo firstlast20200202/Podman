@@ -25,7 +25,7 @@ then input http://localhost:8083/ into the browser, it will run again.
 > podman stop [Container ID]    //stop the running container with container ID
 refresh the localhost:8083 page, it would lose the connection as expected
 > podman ps -a       //verify container status again
-the container doesnt show up in the list here, because the container was started with --rm which means that auto-removes the container after it stops
+the container doesnt show up in the list here, because the container was started with --rm which means it auto-removes the container after it stops
 --rm:
 podman run --rm nginx
         │
