@@ -6,18 +6,23 @@ to use Podman, WSL needs to be installed first:
 
 
 install Podman and open cmd:
+> podman --version
 //ignore certificate
-> podman run --tls-verify=false hello-world
+> podman run --tls-verify=false hello-world    //there shouldnt be a space before 'world', as it couldnt be recognised
 
+so the whole idea of this tutorial is:
+pull an image from a public registry -> run it in my local machine -> 
+
+> podman pull --tls-verify=false nginx    //have an image available in podman now
+
+
+
+some useful commands:
 //list all RUNNING containers
 > podman ps
 
 //list available Podman-managed virtual machines
 > podman machine ls
-
-> podman run hello-world
-
-> podman pull --tls-verify=false nginx    //have an image available in podman now
 
 in Windows Subsystem for Linux (WSL), the 'image' you pull out (export) is actually your extire installed Linux operating system (eg. Ubuntu, Debian etc.)
 formatted as a .tar file.
