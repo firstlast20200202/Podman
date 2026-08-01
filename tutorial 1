@@ -71,7 +71,7 @@ get into the folder in local machine where the solution has been created in, say
 copy the dockerfile to the outer 'MyPodmanAPI' folder, then open terminal in Rider app, run:
 > podman build . -t MyPodmanAPI1        //it's pulling the image and building it as well as containerising the application into the image
 > podman images                         //verify
-then run the application locally in development environment:
+then run the application:
 > podman run -p 8085:8080 MyPodmanAPI1
 
 swagger
