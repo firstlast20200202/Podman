@@ -63,16 +63,18 @@ create a pod -> run an image
 then in podman desktop application: Dashboard -> Pods, click the pod name, it will show the logs and inspect etc. of this newly created pod
 
 
-workflow: tomorrow
+workflow: containerise a web application
 use a dockerfile to create an image and run a container on the image: (Rider is used to auto-generate dockerfile)
-open Jetbrains Rider, click New Solution, select 'Web API' on the left side of the pop up window, Web API is the traditional ASP.NET Web Application, 
-set a solution name and follow the prompts to finish the process
+open Jetbrains Rider, click New Solution, select 'Web API' on the left side of the pop up window, Web API is the traditional ASP.NET Web Application, select 
+'Linux' in docker support, set a solution name and follow the prompts to finish the process
 get into the folder in local machine where the solution has been created in, say, in folder 'MyPodmanAPI', there is one more folder called 'MyPodmanAPI' which has a dockerfile, 
 copy the dockerfile to the outer 'MyPodmanAPI' folder, then open terminal in Rider app, run:
 > podman build . -t MyPodmanAPI1        //it's pulling the image and building it as well as containerising the application into the image
-> podman images
+> podman images                         //verify
 then run the application locally in development environment:
 > podman run -p 8085:8080 MyPodmanAPI1
+
+swagger
 then click the green triangle button on top right of Rider app
 so now we are in the 'run' tab at the bottom left corner of Rider app
 click the 'terminal' tab under the 'run' tab, run the scripts typed already as above: > podman run --tls-verify=false -p 8085:8080 mypodmanapi1
