@@ -11,3 +11,7 @@ podman machine init
 podman machine start    
 podman info
 podman version
+
+
+default registry location:
+/etc/containers/registries.conf
