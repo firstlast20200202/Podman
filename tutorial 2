@@ -1,5 +1,7 @@
 //tutorial link: https://www.youtube.com/watch?v=YXfA5O5Mr18
 
+OCI: a standard
+
 on Mac:
 brew install podman
 //containers are a Linux technology, the only way to run containers on other platforms is to rely on a Limux virtual machine, podman on MacOS and Windows requires a virtual machine. 
