@@ -15,3 +15,7 @@ podman version
 
 default registry location:
 /etc/containers/registries.conf
+
+customise a registry config file:
+$ mkdir .config/containers
+$ vim .config/containers/registries.conf
