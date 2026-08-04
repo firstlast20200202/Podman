@@ -57,4 +57,7 @@ $ podman rm pdm-nginx                                 //remove container
 $ podman rmi <image-ID>                               //remove image, image ID can be retrieved by running $ podman images
 
 
-
+workflow: building a cotnainer image
+$ vim Dockerfile
+$ podman build -t <image-name> .
+$ podman run --name <container-name> \ -p 8080:8080 <image-name>:<tag>
