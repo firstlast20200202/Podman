@@ -92,7 +92,7 @@ eg. $ podman run -dt --pod pdm-golang-pod pdm-golang
 verify: $ podman ps -a --pod
 $ podman pod start <pod-name>
 $ podman pod stop <pod-name>
-$ podman pod rm <pod-name>
+$ podman pod rm <pod-name>                                          //to remove a container, it has to be stopped first $ podman pod stop <pod-name>; otherwise use '--force'
 
 
 
