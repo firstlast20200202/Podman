@@ -79,7 +79,7 @@ $ curl localhost:8081
 
 workflow: building pods with Podman
 $ podman pod --help
-$ podman pod create --name <pod-name>
+$ podman pod create --name <pod-name>          //it auto-creates an infra container in the empty pod to hold the namespaces and facilitate communication with other containers in the pod
 $ podman pod ls                                //ls: list
 $ podman ps -a --pod                           //list all the containers in the POD
 $ podman ps -a                                 //list all the containers in the SYSTEM
