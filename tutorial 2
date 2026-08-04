@@ -33,9 +33,9 @@ best practice: $ podman run -it --rm <image-name>             //avoid filling up
 $ podman ps                         //shows running containers
 $ podman ps -a
 
-when you run $ podman run -it <image-name>, yo uare actually inside the container, so you can
+when you run $ podman run -it <image-name>, you are actually inside the container, so you can
 / # ls
-/ # exit    //quit the container, or ctrl+C instead
+/ # exit    //stop running the container, or ctrl+C instead
 
 $ podman run --name <container-name> \ -p ext_port:int_port <container-IMAGE>
 $ podman start <container-name>
@@ -45,13 +45,16 @@ $ podman stop <container-name>
 $ pdoman rm <container-name>
 $ pdoman rmi <container-IMAGE>
 
-
-
-
-
-
-
-
+eg.
+$ podman run --name pdm-nginx -p 8080:80 nginx        //this command pull nginx image if it's not present and runs a new cotnainer named 'pdm-nginx'; -p assigns port 80 in the container to host port 8080 on my machine
+$ exit
+$ podman start pdm-nginx                              //start running the container again in detach mode
+$ podman inspect pdm-nginx                            //get more information of the container in json format
+$ odman port pdm-nginx                                //check the port that container is using
+$ curl localhost:8080
+$ podman stop pdm-nginx                               //stop running a cotnainer on the host machine, 'exit' is used inside a container's shell
+$ podman rm pdm-nginx                                 //remove container
+$ podman rmi <image-ID>                               //remove image, image ID can be retrieved by running $ podman images
 
 
 
