@@ -28,5 +28,12 @@ eg. $podman search busybox
 $ podman pull <image-name>
 $ podman images                     //verify
 
+$ podman run -it <image-name>       //create and run a new container for an image, -it tells podman to allocate a virtual terminal session within the container
+best practice: $ podman run -it --rm <image-name>             //avoid filling up file system
+$ podman ps                         //shows running containers
+$ podman ps -a
 
+when you run $ podman run -it <image-name>, yo uare actually inside the container, so you can
+/ # ls
+/ # exit    //quit the container, or ctrl+C instead
 
