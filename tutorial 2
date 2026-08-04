@@ -37,3 +37,21 @@ when you run $ podman run -it <image-name>, yo uare actually inside the containe
 / # ls
 / # exit    //quit the container, or ctrl+C instead
 
+$ podman run --name <container-name> \ -p ext_port:int_port <container-IMAGE>
+$ podman start <container-name>
+$ podman inspect <container-name>
+$ podman port <container-name>
+$ podman stop <container-name>
+$ pdoman rm <container-name>
+$ pdoman rmi <container-IMAGE>
+
+
+
+
+
+
+
+
+
+
+
