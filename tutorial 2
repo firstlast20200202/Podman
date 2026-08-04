@@ -77,9 +77,11 @@ $ podman ps
 $ curl localhost:8081
 
 
-
-
-
+workflow: building pods with Podman
+$ podman pod --help
+$ podman pod create --name <pod-name>
+$ podman pod ls                                //ls: list
+$ podman ps -a --pod                           //list all the containers in the pod
 
 
 
