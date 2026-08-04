@@ -57,7 +57,32 @@ $ podman rm pdm-nginx                                 //remove container
 $ podman rmi <image-ID>                               //remove image, image ID can be retrieved by running $ podman images
 the difference of podman run and podman start is: podman run creates a new container, podman start starts an existing container.
 
+
 workflow: building a cotnainer image
 $ vim Dockerfile
 $ podman build -t <image-name> .                                                //-t is -tag, which specifies a name for the image
 $ podman run --name <container-name> \ -p 8080:8080 <image-name>:<tag>          //run a container based on the previously built image
+
+
+workflow: share your image with other people to give them the possibility to use your application, that means pushing the image to a registry
+$ podman login <registry-name>                    //eg. docker.io
+$ podman build -t <username>/<image-name>         //building the image
+$ podman push <username>/<image-name>
+next, simulate someone who would like to use this image by pulling it from Docker Hub:
+$ podman search <image-name>
+$ podman pull docker.io/<username>/<image-name>
+$ podman iamges
+$ podman run -d --name <container-name> -p 8081:8080 docker.io/<username>/<image-name>
+$ podman ps
+$ curl localhost:8081
+
+
+
+
+
+
+
+
+
+
+
