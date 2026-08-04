@@ -79,7 +79,8 @@ $ curl localhost:8081
 
 workflow: building pods with Podman
 $ podman pod --help
-$ podman pod create --name <pod-name>          //it auto-creates an infra container in the empty pod to hold the namespaces and facilitate communication with other containers in the pod
+$ podman pod create --name <pod-name>          //it auto-adds an infra container in the empty pod to hold the namespaces and facilitate communication with other containers in the pod;
+                                               //the default infra container is based on this image: k8s.gcr.io/pause, which shows up in names by running $ podman ps -a
 $ podman pod ls                                //ls: list
 $ podman ps -a --pod                           //list all the containers in the POD
 $ podman ps -a                                 //list all the containers in the SYSTEM
