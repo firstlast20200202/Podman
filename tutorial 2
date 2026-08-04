@@ -3,14 +3,14 @@
 OCI (Open Container Initiative): a standard
 
 on Mac:
-brew install podman
+$ brew install podman
 //containers are a Linux technology, the only way to run containers on other platforms is to rely on a Limux virtual machine, podman on MacOS and Windows requires a virtual machine. 
 //the default machine name os podman-machine-default if a machine name is not specified as an argument, then 'podman-machine-default' will be started.
 //only one podman virtual machine can be started, if a virtual machine is already running, podman machine start returns an error.
-podman machine init
-podman machine start    
-podman info
-podman version
+$ podman machine init
+$ podman machine start    
+$ podman info
+$ podman version
 
 
 default registry location:
@@ -55,7 +55,7 @@ $ curl localhost:8080
 $ podman stop pdm-nginx                               //stop running a cotnainer on the host machine, 'exit' is used inside a container's shell
 $ podman rm pdm-nginx                                 //remove container
 $ podman rmi <image-ID>                               //remove image, image ID can be retrieved by running $ podman images
-
+the difference of podman run and podman start is: podman run creates a new container, podman start starts an existing container.
 
 workflow: building a cotnainer image
 $ vim Dockerfile
