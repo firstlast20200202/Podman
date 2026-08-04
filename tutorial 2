@@ -86,6 +86,20 @@ $ podman ps -a --pod                           //list all the containers in the 
 $ podman ps -a                                 //list all the containers in the SYSTEM
 
 
+workflow: working with containers inside a pod with Podman
+$ podman run -dt --pod <pod-name> \ <container-image-name>
+$ podman pod start <pod-name>
+$ podman pod stop <pod-name>
+$ podman pod rm <pod-name>
+
+
+
+
+
+
+
+
+
 
 
 
