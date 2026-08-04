@@ -87,7 +87,7 @@ $ podman ps -a                                 //list all the containers in the 
 
 
 workflow: working with containers inside a pod with Podman
-$ podman run -dt --pod <pod-name> \ <image-name>
+$ podman run -dt --pod <pod-name> \ <image-name>                    // \: line continuation 2333
 eg. $ podman run -dt --pod pdm-golang-pod pdm-golang
 $ podman pod start <pod-name>
 $ podman pod stop <pod-name>
