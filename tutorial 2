@@ -109,6 +109,8 @@ $ podman generate kube pdm-golang-pod
 $ podman generate kube pdm-golang-pod >> pdm-golang.yaml
 $ podman pod stop pdm-golang-pod
 $ podman pod rm pdm-golang-pod                                       //it removes the container, not the yaml file, the yaml file is still existing
-
-
+$ podman play kube pdm-golang.yaml                                   //it creates a new pod as well as a container running on it
+test:
+$ podman pod ls
+$ podman ps --pod
 
