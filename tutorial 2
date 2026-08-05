@@ -102,12 +102,13 @@ $ podman generate kube <pod-name>
 $ podman generate kube <podman-name> >> <file-name>.yaml    
 $ podman play kube <file-name>.yaml                                  //creates a new pod based on this yaml file, this allows you to test config locally before deployment
 eg. 
-$ podman run -dt --pod new:pdm-golang-pod -p 8081:80 pdm-golang    //new: create a new pod, as well as create and run a container inside the pod
+$ podman run -dt --pod new:pdm-golang-pod -p 8081:80 pdm-golang      //new: create a new pod, as well as create and run a container inside the pod
 verify: $ podman pod ls
         $ podman ps --pod
 $ podman generate kube pdm-golang-pod
 $ podman generate kube pdm-golang-pod >> pdm-golang.yaml
-
+$ podman pod stop pdm-golang-pod
+$ podman pod rm pdm-golang-pod                                       //it removes the container, not the yaml file, the yaml file is still existing
 
 
 
