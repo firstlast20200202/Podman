@@ -94,7 +94,7 @@ $ podman pod start <pod-name>
 $ podman pod stop <pod-name>
 $ podman pod rm <pod-name>                                          //to remove a container, it has to be stopped first $ podman pod stop <pod-name>; otherwise use '--force'
 
-
+'$ podman stop' stops a container; '$ podman pod stop' stops a pod.
 
 
 
