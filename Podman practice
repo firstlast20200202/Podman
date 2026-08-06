@@ -30,3 +30,9 @@ troubleshoot:
 2. podman building images stuck at step 6/7: COPY --chmod=770..
    probably caused by large build contexts or massive node_modules drectories, potential solution: create a .dockerignore file 
    resolved by adding npm cache clean code in dockerfile
+   verify: $ curl -v localhost:[port-number]
+
+   note: the difference of curl -v localhost:[port-number] and curl localhost:[port-number] 
+   without -v it outputs response body only 'Hello, World!'
+   with -v it outputs connection details, request, response headers, response body and connection status
+   
