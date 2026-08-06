@@ -55,8 +55,7 @@ the solution is as below:
 > docker rm -f $(docker ps -aq)
 
 
-workflow: 
-create a pod -> run an image
+workflow: create a pod -> run an image
 > podman pod create --name dotnetpod    
 > podman run -d --pod dotnetpod nginx
 > podman ps -a    //verify
