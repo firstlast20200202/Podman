@@ -20,13 +20,13 @@ add 'V2' in field 'module' in web.config file to be like:
 dockerfile for running angular components:
 
 
-25th Feb 2026:
-if it shows 'No Container Engine' when open podman, and 'the user has not been granted the requested logon type at this computer' when input 'podman machine init' in cmd, that's probably 
-because the virtual machine that images have been built is dead, it needs to be 'podman machine init' and 'podman machine start' before building the images again.
+troubleshoot:
+1. if it shows 'No Container Engine' when open podman, and 'the user has not been granted the requested logon type at this computer' when input 
+   'podman machine init' in cmd, that's probably because the virtual machine that images have been built is dead, it needs to be 'podman machine init' and 
+   'podman machine start' before building the images again.
 
-30th July 2026:
-to make podman work for containers, you need to install podman to create images; to install podman, you need to install wsl
-error:
-podman building images: stuck at step 6/7: COPY --chmod=770..
-probably caused by large build contexts or massive node_modules drectories
-solution: create a .dockerignore file 
+   note: to make podman work for containers, you need to install podman to create images; to install podman, you need to install wsl
+
+2. podman building images stuck at step 6/7: COPY --chmod=770..
+   probably caused by large build contexts or massive node_modules drectories, potential solution: create a .dockerignore file 
+   resolved by adding npm cache clean code in dockerfile
