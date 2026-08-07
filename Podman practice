@@ -22,7 +22,7 @@ dockerfile for running angular components:
 
 troubleshoot:
 1. if it shows 'No Container Engine' when open podman, and 'the user has not been granted the requested logon type at this computer' when input 
-   'podman machine init' in cmd, that's probably because the virtual machine that images have been built is dead, it needs to be 'podman machine init' and 
+   'podman machine init' in cmd, that's probably because the virtual machine that images have been built in is dead, need to run 'podman machine init' and 
    'podman machine start' before building the images again.
 
    note: to make podman work for containers, you need to install podman to create images; to install podman, you need to install wsl
