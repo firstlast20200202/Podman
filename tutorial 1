@@ -79,7 +79,6 @@ then run the application:
 then click the green triangle button on top right of Rider app, it should be running locally now.
 
 
-
 some useful commands:
 //list all RUNNING containers
 > podman ps
