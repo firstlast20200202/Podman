@@ -76,20 +76,7 @@ which has a dockerfile, copy the dockerfile to the outer 'MyPodmanAPI' folder, t
 > podman images                         //verify
 then run the application:
 > podman run -p 8085:8080 MyPodmanAPI1
-then click the green triangle button on top right of Rider app to run the container
-
-so now we are in the 'run' tab at the bottom left corner of Rider app
-click the 'terminal' tab under the 'run' tab, run the scripts typed already as above: > podman run --tls-verify=false -p 8085:8080 mypodmanapi1
-//make sure all the letters are in lower cases
-then find the url in MyPodmanAPI1http file in Rider, and open the request link in browser, it should be running.
-actually... error: requested access to the resource is denied
-*********************************************************************************
-
-
-
-
-
-
+then click the green triangle button on top right of Rider app, it should be running locally now.
 
 
 
