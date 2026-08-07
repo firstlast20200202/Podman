@@ -76,11 +76,8 @@ which has a dockerfile, copy the dockerfile to the outer 'MyPodmanAPI' folder, t
 > podman images                         //verify
 then run the application:
 > podman run -p 8085:8080 MyPodmanAPI1
+then click the green triangle button on top right of Rider app to run the container
 
-********************************************************************************
-this part needs to be re-done after fixing the build issue
-swagger
-then click the green triangle button on top right of Rider app
 so now we are in the 'run' tab at the bottom left corner of Rider app
 click the 'terminal' tab under the 'run' tab, run the scripts typed already as above: > podman run --tls-verify=false -p 8085:8080 mypodmanapi1
 //make sure all the letters are in lower cases
